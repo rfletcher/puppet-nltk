@@ -9,9 +9,9 @@ requires the use of the `pip` provider for installing the package. On
 a Debian/Ubuntu system, this might look something like this:
 
 
-    class { "nltk":
+    nltk { 'nltk':
       require => Package['python-pip'],
     }
 
     # download the stopwords and punkt corpi
-    nltk::downloader { [ "stopwords", "punkt" ]: }
+    nltk::data { [ "stopwords", "punkt" ]: }
